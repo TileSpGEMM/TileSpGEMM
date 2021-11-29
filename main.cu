@@ -19,7 +19,7 @@ int main(int argc, char ** argv)
         return 0;
     }
 	
-    printf("--------------------------------!!!!!!!!------------------------------------\n");
+  //  printf("--------------------------------!!!!!!!!------------------------------------\n");
     
     int device_id = 0;
     int aat = 0;
@@ -43,7 +43,7 @@ int main(int argc, char ** argv)
         device_id = atoi(argv[argi]);
         argi++;
     }
-    printf("device_id = %i\n", device_id);
+   // printf("device_id = %i\n", device_id);
     
     // set device
     cudaSetDevice(device_id);
@@ -54,9 +54,9 @@ int main(int argc, char ** argv)
     size_t size = min( int(deviceProp.l2CacheSize * 0.80) , deviceProp.persistingL2CacheMaxSize );
     cudaDeviceSetLimit( cudaLimitPersistingL2CacheSize, size); 
 
-    printf("---------------------------------------------------------------\n");
-    printf("Device [ %i ] %s @ %4.2f MHz\n",
-           device_id, deviceProp.name, deviceProp.clockRate * 1e-3f);
+  //  printf("---------------------------------------------------------------\n");
+  //  printf("Device [ %i ] %s @ %4.2f MHz\n",
+   //        device_id, deviceProp.name, deviceProp.clockRate * 1e-3f);
            
     // load AAT flag
     char *aatstr;
